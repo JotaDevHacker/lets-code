@@ -1,0 +1,141 @@
+:root {
+  --background-color: #0F0D13;
+  --primary-color: #2A2141;
+  --text-primary-color: #E1E1E6;
+  --text-secondary-color: #C4C4CC;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "sans-serif";
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary-color);
+  height: 100%;
+}
+
+/* #app * {
+  border: 1px solid blue;
+} */
+
+#app {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-areas:
+  "playerOne playerTwo"
+  "playerOne playerThree";
+  height: 100vh;
+
+  gap: 2rem;
+  place-content: center;
+}
+
+/* Player One */
+#playerOne {
+  grid-area: playerOne;
+  padding: 3rem 2.25rem;
+}
+
+#playerOne .wrapper {
+  width: 12rem;
+}
+
+#playerOne > img {
+  width: 12rem;
+  height: 12rem;
+}
+
+/* Player Two */
+#playerTwo {
+  grid-area: playerTwo;
+}
+
+/* Player Three */
+#playerThree {
+  grid-area: playerThree;
+}
+
+.player {
+  background-color: var(--primary-color);
+  padding: 1.75rem;
+  border-radius: .5rem;
+}
+
+.player img {
+  border-radius: .25rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.info h2 {
+  font-size: 1.5rem;
+}
+
+.info p {
+  opacity: .67;
+  font-size: 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.track-time {
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+}
+
+.track {
+  position: relative;
+}
+
+.track::before {
+  content: '';
+  height: 6px;
+  width: 100%;
+  display: block;
+  background: var(--text-primary-color);
+  opacity: .3;
+  border-radius: .625rem;
+  
+  position: absolute;
+}
+
+.track::after {
+  content: '';
+  height: 6px;
+  width: 25%;
+  display: block;
+  background: var(--text-secondary-color);
+  border-radius: .625rem;
+}
+
+.time {
+  font-size: .875rem;
+  color: var(--text-secondary-color);
+  opacity: .7;
+  display: flex;
+  justify-content: space-between;
+}
