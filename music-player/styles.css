@@ -148,3 +148,27 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 650px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+
+  
+    gap: 2rem;
+    place-content: center;
+  }
+
+  #playerOne .wrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  #playerOne .album {
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto;
+  }
+}
